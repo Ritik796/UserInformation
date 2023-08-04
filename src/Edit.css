@@ -1,0 +1,71 @@
+/* Edit.css */
+.edit-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+label {
+  font-size: 16px;
+}
+
+input {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.edit{
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-right: 4px;
+  background-color: darkcyan;
+  font-weight: 700;
+  
+}
+.edits{
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: grey;
+  font-weight: 700;
+
+}
+.edit:hover{
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+}
+.edits:hover{
+  background-color:dodgerblue;
+  color: white;
+  cursor: pointer;
+}
+
+/* Add media query for mobile phone view */
+@media (max-width: 600px) {
+  .edit-container {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}

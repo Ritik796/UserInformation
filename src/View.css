@@ -1,0 +1,66 @@
+.view {
+  border-radius: 7px;
+  background-color: slategray;
+  margin-right: 10px;
+  font-weight: 550;
+  padding: 8px;
+}
+.views {
+  border-radius: 7px;
+  background-color: #e3b613;
+  font-weight: 550;
+  padding: 8px;
+}
+.views:hover {
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.view:hover {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+.tableStyle {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.thStyle {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.tdStyle {
+  border: 1px solid #dddddd;
+  padding: 0px;
+  text-align: left;
+  padding: 8px;
+}
+.trHoverStyle {
+  background-color: #f5f5f5;
+}
+@media (max-width: 480px) {
+  .tableStyle {
+    font-size: 12px;
+  }
+
+  .thStyle,
+  .tdStyle {
+    padding: 6px;
+  }
+
+  .trHoverStyle {
+    background-color: transparent;
+  }
+
+  .view,
+  .views {
+    width: auto;
+    padding: 5px 10px;
+    margin-right: 1v5px;
+    margin-bottom: 5px;
+  }
+}
