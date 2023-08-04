@@ -30,34 +30,30 @@ function App() {
     </BrowserRouter>
   );
 }
-    const NetworkstatusListner = () => {
-      const navigate = useNavigate();
-      useEffect(() => {
-        const Handleonline = () => {
-          navigate("/");
-          return;
-        };
-        const HandleOffline = () => {
-          navigate("*");
-          return;
-        };
-        const HandleONlineEvent =()=>{
-          Handleonline()
-        }
-        const HandleOfflineVent =()=>{
-          HandleOffline()
-        }
-        if (!navigator.onLine===true) {
-          window.addEventListener("offline", HandleOfflineVent);
-          window.addEventListener("online", HandleONlineEvent);
-          return;
-        }
-        return () => {
-          window.removeEventListener("offline", HandleOfflineVent);
-          window.removeEventListener("online", HandleONlineEvent);
-        };
-      }, [navigate]);
-      return null
+const NetworkstatusListner = () => {
+  const navigate = useNavigate();
+
+  const handleOnline = () => {
+    navigate("/");
+  };
+
+  const handleOffline = () => {
+    navigate("*");
+  };
+
+  useEffect(() => {
+    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
+    
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
     };
+    // eslint-disable-next-line
+  }, []);
+
+  return null; // Return null as this component doesn't render anything
+};
+
 
 export default App;
