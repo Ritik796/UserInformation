@@ -39,6 +39,10 @@
   text-align: left;
   padding: 8px;
 }
+.tdStyle:hover{
+  background-color: darkgray;
+  color: white;
+}
 .trHoverStyle {
   background-color: #f5f5f5;
 }

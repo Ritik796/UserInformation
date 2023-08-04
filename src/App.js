@@ -8,6 +8,7 @@ import ContextState from "./Component/ContextState";
 import Navbar from "./Component/Navbar";
 import HomeComponent from "./Component/HomeComponent";
 import { useEffect } from "react";
+import Counter from "./Practics.js/Counter";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/edit" element={<Edit />} />
             <Route path="/edit/:id" element={<Edit />} />
             <Route path="*" element={<Default />} />
+            <Route path="/counter" element={<Counter />} />
           </Routes>
         </ContextState>
       </>
@@ -44,7 +46,7 @@ const NetworkstatusListner = () => {
   useEffect(() => {
     window.addEventListener("offline", handleOffline);
     window.addEventListener("online", handleOnline);
-    
+
     return () => {
       window.removeEventListener("offline", handleOffline);
       window.removeEventListener("online", handleOnline);
@@ -54,6 +56,5 @@ const NetworkstatusListner = () => {
 
   return null; // Return null as this component doesn't render anything
 };
-
 
 export default App;
