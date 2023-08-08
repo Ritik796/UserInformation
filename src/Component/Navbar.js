@@ -33,6 +33,14 @@ function Navbar() {
               View
             </Link>
           </li>
+          <li className="nav-item">
+            More
+            <ul className="dropdown-content">
+              <li>Converter</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </nav>

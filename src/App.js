@@ -9,6 +9,7 @@ import Navbar from "./Component/Navbar";
 import HomeComponent from "./Component/HomeComponent";
 import { useEffect } from "react";
 import Counter from "./Practics.js/Counter";
+import Memo from "./Component/Memo";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/edit/:id" element={<Edit />} />
             <Route path="*" element={<Default />} />
             <Route path="/counter" element={<Counter />} />
+            <Route path="/memo" element={<Memo/>} />
           </Routes>
         </ContextState>
       </>

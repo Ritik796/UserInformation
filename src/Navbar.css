@@ -52,3 +52,20 @@
   color: #ff9900;
   background-color: white;
 }
+.dropdown-content{
+  display: none;
+  position: absolute;
+  list-style: none;
+}
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown-content li:hover {
+  background-color: #000000;
+}
