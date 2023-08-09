@@ -34,13 +34,11 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            More
-            <ul className="dropdown-content">
-              <li>Converter</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
+            <Link to="/memo" className={`nav-link ${location.pathname==='/memo'?"change":" "}`}>
+              Currency Converter
+            </Link>
           </li>
+          
         </ul>
       </div>
     </nav>
