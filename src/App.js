@@ -10,6 +10,7 @@ import HomeComponent from "./Component/HomeComponent";
 import { useEffect } from "react";
 import Counter from "./Practics.js/Counter";
 import Memo from "./Component/Memo";
+import DId from "./Component/DId";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="*" element={<Default />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/memo" element={<Memo/>} />
+            <Route path="/f" element={<DId/>} />
           </Routes>
         </ContextState>
       </>

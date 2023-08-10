@@ -1,0 +1,33 @@
+label{
+    display: block;
+}
+select{
+    width: 90%;
+    padding: 10px 0px;
+    border-radius: 4px;
+    outline: none;
+}
+input[type='number']{
+    width: 80%;
+    border-radius: 4px;
+    outline: none;
+}
+.curr-btn{
+    padding: 10px 0px;
+    display: block;
+    border-radius: 5px;
+    width: 30%;
+    margin:18px auto;
+    background-color: darkcyan;
+    color: white;
+    font-weight: bold;
+}
+.curr-btn:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+h3{
+    display: inline;
+}
