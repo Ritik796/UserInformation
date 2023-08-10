@@ -1,8 +1,8 @@
-import React, {  useState } from "react";
+import React, { useEffect, useState } from "react";
 import { database } from "../Firebase/Firebase";
-import { get, ref, update } from "firebase/database"
+import { get, ref, update } from "firebase/database";
 import "../Login.css";
-import {  ToastContainer, Zoom, toast } from "react-toastify";
+import { ToastContainer, Zoom, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../Toast.css";
 
@@ -48,7 +48,35 @@ export default function Login() {
       handleSave();
     });
   };
+  let userlist = []
+  const Localstorage = async () => {
+    await get(ref(database, "Userentry/")).then((snapshot) => {
+      const data = snapshot.val();
+      
+      if (data !== undefined && data !== null) {
+        const key = Object.keys(data);
+        for (let index = 0; index < key.length; index++) {
+          const Keyarray = key[index];
+          if (Keyarray !== "Lastkey") {
+            const Username = data[Keyarray]["Name"]
+            const UserEmail = data[Keyarray]["Email"]
+            const UserPassword = data[Keyarray]["Password"]
+            userlist.push({
+              Username: Username,
+              UserEmail: UserEmail,
+              UserPassword: UserPassword
+            })
 
+           
+          }
+        }
+      }
+      localStorage.setItem("Userlist", JSON.stringify(userlist))
+    });
+  };
+useEffect(()=>{
+  Localstorage()
+})
   const handleSave = async () => {
     setIssaving(true);
     setTimeout(() => {

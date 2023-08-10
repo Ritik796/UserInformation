@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import Counter from "./Practics.js/Counter";
 import Memo from "./Component/Memo";
 import DId from "./Component/DId";
+import Parent from "./Practics.js/Parent";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/counter" element={<Counter />} />
             <Route path="/memo" element={<Memo/>} />
             <Route path="/f" element={<DId/>} />
+            <Route path="/parent" element={<Parent/>}/>
           </Routes>
         </ContextState>
       </>
