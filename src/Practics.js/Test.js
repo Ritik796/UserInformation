@@ -8,9 +8,10 @@ function Test() {
     useEffect(()=>{
         ref.current="yellow"
         console.log(ref,"useeffect");
+       
     })
     useLayoutEffect(()=>{
-        console.log(ref.current,"uselayouteffect");
+        console.log(ref,"uselayouteffect");
        
     })
   return (
