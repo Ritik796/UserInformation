@@ -4,13 +4,13 @@ import "../Navbar.css";
 
 function Navbar() {
   const location = useLocation()
-  useEffect(()=>{
-    console.log(location.pathname)
-    console.log(location.hash)
-    console.log(location.key)
-    console.log(location.search);
-    console.log(location.state)
-  },[location])
+  // useEffect(()=>{
+  //   console.log(location.pathname)
+  //   console.log(location.hash)
+  //   console.log(location.key)
+  //   console.log(location.search);
+  //   console.log(location.state)
+  // },[location])
   return (
     <nav className="navbar">
       <div className="navbar-container ">

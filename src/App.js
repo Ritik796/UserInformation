@@ -12,6 +12,10 @@ import Counter from "./Practics.js/Counter";
 import Memo from "./Component/Memo";
 import DId from "./Component/DId";
 import Parent from "./Practics.js/Parent";
+// import Childone from "./Practics.js/Childone";
+import Parrentone from "./Practics.js/Parrentone";
+import Test from "./Practics.js/Test";
+
 
 function App() {
   return (
@@ -32,7 +36,10 @@ function App() {
             <Route path="/memo" element={<Memo/>} />
             <Route path="/f" element={<DId/>} />
             <Route path="/parent" element={<Parent/>}/>
+            <Route path="/childone" element={<Parrentone/>}/>
+            <Route path="/test" element={<Test/>}/>
           </Routes>
+          
         </ContextState>
       </>
     </BrowserRouter>
