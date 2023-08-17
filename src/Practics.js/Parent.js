@@ -41,7 +41,7 @@ export default function Parent() {
 
       <hr />
       <p   ></p>
-      <span style={{color:valueref.current>=10 &&valueref.current<20 ?"green":valueref.current==20?"blue":valueref.current==30?"red":"black"}} hidden={valueref.current>=40}>{value}</span>
+      <span style={{color:valueref.current>=10 &&valueref.current<20 ?"green":valueref.current===20?"blue":valueref.current===30?"red":"black"}} hidden={valueref.current>=40}>{value}</span>
       <button onClick={valueIncrease}>Valuerefcount</button>
 
     </div>

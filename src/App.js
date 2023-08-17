@@ -17,6 +17,7 @@ import Parrentone from "./Practics.js/Parrentone";
 import Test from "./Practics.js/Test";
 
 import ForUseloggerTest from "./Practics.js/ForUseloggerTest";
+import DataFetchingComponent from "./Practics.js/DataFetchingComponent";
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
             <Route path="/childone" element={<Parrentone />} />
             <Route path="/test" element={<Test />} />
             <Route path="/uselogger" element={<ForUseloggerTest />} />
+            <Route path="/usedeffered" element={<DataFetchingComponent />} />
+
           </Routes>
         </ContextState>
       </>
