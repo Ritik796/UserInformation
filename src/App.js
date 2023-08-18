@@ -18,6 +18,8 @@ import Test from "./Practics.js/Test";
 
 import ForUseloggerTest from "./Practics.js/ForUseloggerTest";
 import DataFetchingComponent from "./Practics.js/DataFetchingComponent";
+import TransitionHook from "./Practics.js/TransitionHook";
+import UsesyncExternalStoreHook from "./Practics.js/UsesyncExternalStoreHook";
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
             <Route path="/test" element={<Test />} />
             <Route path="/uselogger" element={<ForUseloggerTest />} />
             <Route path="/usedeffered" element={<DataFetchingComponent />} />
+            <Route path="/transition" element ={<TransitionHook/>}/>
+            <Route path="/externalstore" element={<UsesyncExternalStoreHook/>}/>
 
           </Routes>
         </ContextState>

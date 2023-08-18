@@ -3,7 +3,7 @@ export default function DataFetchingComponent() {
   const [data, setdata] = useState(null);
   const defferedData = useDeferredValue(data);
   let value1 = "https://openexchangerates.org/api/currencies.json"
-  let value2 = "https://v6.exchangerate-api.com/v6/c997b3c9f30fdbe821554d58/latest/USD"
+  let value2 = " https://jsonplaceholder.typicode.com/todos/"
   useEffect(() => {
     fetch(value1).then((response)=>response.json()).then((data)=>setdata(data))
     setTimeout(() => {

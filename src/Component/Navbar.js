@@ -1,9 +1,9 @@
 import React from "react";
-import { Link ,useLocation} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "../Navbar.css";
 
 function Navbar() {
-  const location = useLocation()
+  // const location = useLocation()
   // useEffect(()=>{
   //   console.log(location.pathname)
   //   console.log(location.hash)
@@ -14,29 +14,37 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container ">
-        <Link to="/home" className="navbar-logo ">
+        <NavLink to="/home" className="navbar-logo ">
           User Information
-        </Link>
+        </NavLink>
         <ul className="nav-menu">
           <li className="nav-item ">
-            <Link  className={`nav-link ${location.pathname==='/home'?"change":" "}`} to="/home">
+            <NavLink style={({isActive})=>{
+              return {color:isActive?"white":"",backgroundColor:isActive?"black":""}
+            }} className={`nav-link `} to="/home">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/login" className={`nav-link ${location.pathname==='/login'?"change":" "}`}>
+            <NavLink style={({isActive})=>{
+              return {color:isActive?"white":"",backgroundColor:isActive?"black":""}
+            }}to="/login" className={`nav-link `}>
               Login
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/view" className={`nav-link ${location.pathname==='/view'?"change":" "}`}>
+            <NavLink style={({isActive})=>{
+              return {color:isActive?"white":"",backgroundColor:isActive?"black":""}
+            }} to="/view" className={`nav-link`}>
               View
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/memo" className={`nav-link ${location.pathname==='/memo'?"change":" "}`}>
+            <NavLink style={({isActive})=>{
+              return {color:isActive?"white":"",backgroundColor:isActive?"black":""}
+            }} to="/memo" className={`nav-link `}>
               Currency Converter
-            </Link>
+            </NavLink>
           </li>
           
         </ul>

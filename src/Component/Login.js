@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useDebugValue, useEffect, useState } from "react";
 import { database } from "../Firebase/Firebase";
 import { get, ref, update } from "firebase/database";
 import "../Login.css";
 import { ToastContainer, Zoom, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../Toast.css";
-
+let Comp = []
 export default function Login() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   // const [data, setdata] = useState(null);
   const [issaving, setIssaving] = useState(false);
+  useDebugValue(Comp)
   let Lastkey = 0;
   // const Messagecontainer = ({type,content}) =>{
   //   return (
@@ -72,6 +73,7 @@ export default function Login() {
         }
       }
       localStorage.setItem("Userlist", JSON.stringify(userlist))
+      Comp = localStorage.setItem("Userlist", JSON.stringify(userlist))
     });
   };
 useEffect(()=>{
